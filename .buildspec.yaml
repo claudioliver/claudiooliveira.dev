@@ -1,0 +1,23 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo Installing
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies.
+      - npm install
+  build:
+    commands:
+      - npm run generate
+  post_build:
+    commands:
+      - aws --version
+      - echo "ls -la"
+      - aws s3 sync dist/ s3://claudiooliveira.dev
+      - aws cloudfront create-invalidation --distribution-id E2O9EYWPPZVHCW --paths "/*"
+artifacts:
+  files:
+    - '**/*'

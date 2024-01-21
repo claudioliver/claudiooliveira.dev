@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const version = 2 + 1
+const version = 5
 </script>
 
 <template>
@@ -7,7 +7,7 @@ const version = 2 + 1
     Hello Nuxt {{ version }}!
   </div>
   <div class="teste">
-    OK v4.0
+    OK v5.0
   </div>
 </template>
 

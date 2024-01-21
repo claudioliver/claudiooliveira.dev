@@ -7,7 +7,7 @@ const version = 2 + 1
     Hello Nuxt {{ version }}!
   </div>
   <div class="teste">
-    OK v3.0
+    OK v4.0
   </div>
 </template>
 
